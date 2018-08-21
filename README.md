@@ -12,6 +12,7 @@ CentOS由Logic H编写中
 感谢nodebb中文社区
 
 #更新日志
+3.1 由Logic H完成剩余部分的翻译，并且修改前文不妥之处
 3.0 修复无法选择redis/MongoDB，加入提示信息选项均为小写字符
 2.9 已经存在redis询问时要求输入r/m修改为y/n，未翻译部分使用中文，而不是空，修复131行[: =: 期待一元表达式
 2.8 修复redis无法写入密码的bug，修复redis重复询问密码bug，修复redis颜色bug
