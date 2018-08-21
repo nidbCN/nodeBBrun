@@ -1,8 +1,9 @@
 # nodeBBrun
 
-# We will support English quickly(Now this shell is only supports Chinese)
+# Now we support English (Partialy)
 
 Gitee:https://gitee.com/nidb/nodeBBrun
+Github:https://github/nidbCN/noodeBBrun
 
 # 项目介绍
 快速部署nodeBB的脚本
