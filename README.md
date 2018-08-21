@@ -11,6 +11,8 @@ Ubuntu已经完成，由Gaein nidb编写
 CentOS由Logic H编写中
 感谢nodebb中文社区
 
+#当前仅部分支持英语，代码未经检测，最近的稳定版是 run-2.5.sh
+
 # 食用方法
 
 Ubuntu使用代码：
