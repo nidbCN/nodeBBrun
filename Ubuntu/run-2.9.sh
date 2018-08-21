@@ -31,13 +31,13 @@ ask_user(){
 	echo -e "\e[92m\e[41m$3\e[39m\e[49m"
 	while true
 	do
-		read -p "请输入 $1" USER_INPUT
+		read -p "请输入 $1\n" USER_INPUT
 		echo "$1" | tr "/" "\n" | grep -Eiq "^${USER_INPUT}$" && eval "$2=\"$USER_INPUT\"" && break
 	done
 }
 INFO="[INFO][`date +%Y-%m-%d` `date +%H:%M:%S`]"
-echo -e "\e[101m[WARN]所有选择请使用小写字符|[WARN]All options use Lowercase letters\e[49m"
-ask_user "y/n" "YES_OR_NO" "您需要切换到英文吗？|Do you want to use English?"
+
+ask_user "y/n" "YES_OR_NO" "您需要切换到英文吗？Do you want to use English?"
 [ "$YES_OR_NO" = "y" ] && {
     L1="nodebb on Ubuntu fast shell started-up"
 	L2="[IMPORTANT]Please ensure apt is not in use by others processes,or install will be failed"
@@ -56,25 +56,6 @@ ask_user "y/n" "YES_OR_NO" "您需要切换到英文吗？|Do you want to use En
 	L15="You chosen mongoDB"
 	L16="Enter the path to install nodebb（Empty is /root/nodebb）"
 	L17="Please do not made a Folder,we will make it"
-	L18="正在设置apt，我们需要确保apt没有被占用，同时将更新软件"
-	L19="系统源更新完成"
-	L20="开始设置curl"
-	L21="curl设置完毕"
-	L22="nodejs快速脚本运行完毕"
-	L23="nodejs安装完成"
-	L24="开始安装redis"
-	L25="redis安装完成"
-	L26="redis安全设置完成"
-	L27="redis重新启动完成，请检查有无报错"
-	L28="系统信息读取成功，开始设置源"
-	L29="开始安装mongoDB"
-	L30="mongoDB安装完成"
-	L31="请自行完成安全设置，按下回车继续，Ctrl+C退出"
-	L32="开始安装Git"
-	L33="Git安装完成"
-	L34="克隆nodebb完成"
-	L35="开始安装nodebb"
-	L36="nodebb安装程序接管窗口"
 }
 [ "$YES_OR_NO" = "n" ] && {
 	L1="nodebb on Ubuntu快速设置脚本启动"
@@ -129,7 +110,7 @@ ask_user "r/m" "R_OR_M" "$L7\n$L8"
 		echo -e "\e[41m$L10\e[49m\e[39m"
 		read password 
 	else	
-		ask_user "y/n" "YES_OR_NO" "$L11\n$L12"
+		ask_user "r/m" "YES_OR_NO" "$L11\n$L12"
 	[ "$YES_OR_NO" = "y" ] && {
 		echo -e "\e[92m$L13"
 		setpw=N
@@ -141,7 +122,7 @@ ask_user "r/m" "R_OR_M" "$L7\n$L8"
 	}
 	fi
 }
-[ "$R_OR_M" = "m" ] && {
+[ "$R_OR_M" = "M" ] && {
 	echo -e "\e[92m$L15"
 	setdb=M
 }
