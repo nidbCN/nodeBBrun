@@ -147,8 +147,9 @@ ask_user "r/m" "R_OR_M" "$L7\n$L8"
 }
 echo -e "\e[92m$L16\n$L17\e[39m"
 read path
-if [ $path = "" ]; then
-    path = "/root/nodebb"
+if [ -z "$path" ] 
+then
+    path="/root/nodebb"
 fi 
 echo -e "\e[44m$INFO$L18\e[49m"
 rm -rf /var/lib/dpkg/lock && rm -rf /var/lib/apt/lists/lock && rm -rf /var/cache/apt/archives/lock
